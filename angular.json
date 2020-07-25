@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "grupoAval"
+    }
+  },
+  "defaultProject": "grupoAval",
+  "cli": {
+    "analytics": false
+  }
 }
