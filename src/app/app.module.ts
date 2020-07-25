@@ -12,6 +12,12 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+import { StoreModule } from '@ngrx/store';
+
+import { environment } from 'src/environments/environment';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { appReducers } from './app.reducers';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -28,6 +34,11 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
         },
         deps: [HttpClient]
       }
+    }),
+    StoreModule.forRoot(appReducers),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production
     })
   ],
   providers: [],
