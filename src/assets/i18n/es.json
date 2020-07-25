@@ -1,3 +1,11 @@
 {
-    "principal.texto": "list of Fruits"
+    "productos": {
+        "tusProductos": "Tus Productos",
+        "tuOrganizador": " tu organizador",
+        "nuevo": "!Nuevo¡",
+        "transferencias": "Transferencias",
+        "certificados": "certificados",
+        "seguridad": "seguridad",
+        "pagos": "pagos"
+    }
 }

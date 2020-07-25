@@ -17,10 +17,21 @@ import { StoreModule } from '@ngrx/store';
 import { environment } from 'src/environments/environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { appReducers } from './app.reducers';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MenuComponent } from './components/menu/menu.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ProductosComponent } from './pages/productos/productos.component';
+import { NoFoundComponent } from './pages/no-found/no-found.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent,
+    HeaderComponent,
+    FooterComponent,
+    ProductosComponent,
+    NoFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +50,8 @@ import { appReducers } from './app.reducers';
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production
-    })
+    }),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

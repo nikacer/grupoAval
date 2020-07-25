@@ -3,10 +3,8 @@ import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import { ReducerInterface } from './app.reducers';
-import { ReducerActionsCounter } from './redux/actions/counter.actions';
 import { TranslateInterface, idiomasDisponibles } from './models/translate.model';
-import { ActionsTranslate, ReducerActionsTranslate } from './redux/actions/translate.actions';
-import { translateDispatch } from './redux/dispatchExport/translate.dispatch';
+import { ReducerActionsTranslate } from './redux/actions/translate.actions';
 
 @Component({
   selector: 'app-root',

@@ -1,0 +1,10 @@
+<div class="menu">
+    <img src="../../../assets/images/aval.jpg">
+    <h1>{{ "productos.tusProductos" | translate}}</h1>
+    <ul>
+        <li *ngFor="let item of menu">
+            {{ item.label | translate}}
+            <span *ngIf="item.extra">{{item.extra | translate}}</span>
+        </li>
+    </ul>
+</div>
