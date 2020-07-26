@@ -25,10 +25,7 @@ export class ProductosComponent implements OnInit {
     this.construirDatos();
   }
 
-  ngOnInit(): void {
-    console.log(this.tiposProductos);
-
-  }
+  ngOnInit(): void { }
 
   construirDatos() {
     this.data.forEach((producto: ProductInterface) => {
