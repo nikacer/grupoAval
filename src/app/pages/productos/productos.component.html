@@ -1,1 +1,10 @@
-<p>productos works!</p>
+<div class="row">
+    <ng-container *ngFor="let tipoProducto of retornarTipoProductos()">
+        <ng-container *ngFor="let producto of tiposProductos[tipoProducto]">
+            <app-tarjeta-producto-uno [producto]="producto" [titulo]="tipoProductoActual(tipoProducto)">
+            </app-tarjeta-producto-uno>
+        </ng-container>
+
+    </ng-container>
+
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { ReducerInterface } from 'src/app/app.reducers';
 
 @Component({
   selector: 'app-menu',
@@ -29,9 +31,15 @@ export class MenuComponent implements OnInit {
       label: 'productos.pagos',
       link: ''
     },
-  ]
+  ];
 
-  constructor() { }
+  lang = 'es';
+
+  constructor(private store: Store<ReducerInterface>) {
+    this.store.select('translate').subscribe(lg => {
+      this.lang = lg.idioma;
+    });
+  }
 
   ngOnInit(): void {
   }

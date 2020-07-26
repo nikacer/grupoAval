@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { faUserCircle, faBell, faSignOutAlt, faLanguage } from '@fortawesome/free-solid-svg-icons';
+import { idiomasDisponibles } from '../../models/translate.model';
+import { ReducerActionsTranslate } from '../../redux/actions/translate.actions';
+import { ReducerInterface } from '../../app.reducers';
+import { Store } from '@ngrx/store';
+import { ReducerActionBancos } from 'src/app/redux/actions/bancos.action';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +13,53 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  iconos = { faUserCircle, faBell, faSignOutAlt, faLanguage };
+
+  menu = [
+    {
+      label: 'header.perfil',
+      icono: faUserCircle,
+      link: ''
+    },
+    {
+      label: 'header.alertas',
+      icono: faBell,
+      link: ''
+    },
+    {
+      label: 'header.idiomas',
+      icono: faLanguage,
+      link: '',
+      child: [
+        {
+          label: 'idiomas.es',
+          click: idiomasDisponibles.es
+        },
+        {
+          label: 'idiomas.en',
+          click: idiomasDisponibles.en
+        }
+      ]
+    },
+    {
+      label: 'header.salidaSegura',
+      icono: faSignOutAlt,
+      link: ''
+    }
+
+  ]
+
+  constructor(private store: Store<ReducerInterface>) { }
 
   ngOnInit(): void {
+  }
+
+  cambiarIdioma(idioma: idiomasDisponibles) {
+    this.store.dispatch(ReducerActionsTranslate.CambiarIdioma({ lg: idioma }));
+  }
+
+  cambioOtrosBancos() {
+    this.store.dispatch(ReducerActionBancos.cambioEstadoBancos());
   }
 
 }

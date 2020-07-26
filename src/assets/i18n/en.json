@@ -6,6 +6,39 @@
         "transferencias": "transfers",
         "certificados": "certificates",
         "seguridad": "security",
-        "pagos": "Payments"
+        "pagos": "Payments",
+        "tipoProducto": "product type",
+        "ValorInvertido": "invested value",
+        "Plazo": "term",
+        "FechaVencimiento": "expiration date",
+        "cupoDisponible": "space available",
+        "proximoPagoMinimo": "next minimum payment",
+        "tipo": {
+            "CERTIFIED_DEPOSIT_TERM": "CDT",
+            "CREDIT_CARD": "CREDIT CARD",
+            "DEPOSIT_ACCOUNT": "DEPOSIT ACCOUNT",
+            "CURRENT_ACCOUNT": "CURRENT ACCOUNT",
+            "CREDIT": "Credit"
+        }
+    },
+    "header": {
+        "perfil": "Profile",
+        "alertas": "alerts",
+        "idiomas": "Languages",
+        "salidaSegura": "logout"
+    },
+    "lenguaje": {
+        "es": "Spanish",
+        "en": "English"
+    },
+    "general": {
+        "buenosDias": "Good Morning",
+        "Days": "Days",
+        "moreDetail": "More detail"
+    },
+    "footer": {
+        "titulo": "You can not find what you're looking for ?",
+        "descripcion": "We continue to have everything you need in this new experience. Meanwhile, you can search what you can't find in the previous version",
+        "versionAnterior": "go to the previous version"
     }
 }

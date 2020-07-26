@@ -28,7 +28,13 @@
             span {
                 display: block;
                 color: grey;
-                font-size: 1.5vw;
+                &:lang('es'){
+                    font-size: 1.5vw;
+                }
+
+                &:lang('en'){
+                    font-size: 10.5vw;
+                }
             }
 
             &:hover {

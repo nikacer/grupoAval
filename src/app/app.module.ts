@@ -23,6 +23,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { NoFoundComponent } from './pages/no-found/no-found.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TarjetaProductoComponent } from './components/tarjeta-producto/tarjeta-producto-uno.component';
+import { OcultarNumeroProductoPipe } from './pipes/ocultar-numero-producto.pipe';
+
+import { DatePipe, CurrencyPipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -31,12 +36,15 @@ import { NoFoundComponent } from './pages/no-found/no-found.component';
     HeaderComponent,
     FooterComponent,
     ProductosComponent,
-    NoFoundComponent
+    NoFoundComponent,
+    TarjetaProductoComponent,
+    OcultarNumeroProductoPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FontAwesomeModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -53,7 +61,7 @@ import { NoFoundComponent } from './pages/no-found/no-found.component';
     }),
     NgbModule
   ],
-  providers: [],
+  providers: [DatePipe, CurrencyPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

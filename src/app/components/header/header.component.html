@@ -1,10 +1,24 @@
 <div class="header">
     <div class="user">
-        Buenos Días, Miguel
+        {{ "general.buenosDias" | translate}}, Miguel
     </div>
     <div class="options">
-        <ul>
-            <li></li>
+        <ul class="nav">
+            <li *ngFor="let item of menu" class="nav-item">
+                {{item.label | translate}}
+                <fa-icon [icon]="item.icono"></fa-icon>
+                <ul class="subMenu" *ngIf="item.child">
+                    <li *ngFor="let subMenu of item.child" (click)="cambiarIdioma(subMenu.click)">
+                        {{ subMenu.label | translate}}
+                    </li>
+
+                </ul>
+            </li>
         </ul>
+    </div>
+    <div class="otrosBancos">
+        <label>Otros Bancos</label>
+        <input type="range" (click)="cambioOtrosBancos()" class="custom-range" id="customRange1" min="0" max="1"
+            value="0">
     </div>
 </div>
