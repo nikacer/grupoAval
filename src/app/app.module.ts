@@ -23,6 +23,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { NoFoundComponent } from './pages/no-found/no-found.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TarjetaProductoComponent } from './components/tarjeta-producto/tarjeta-producto.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +33,14 @@ import { NoFoundComponent } from './pages/no-found/no-found.component';
     HeaderComponent,
     FooterComponent,
     ProductosComponent,
-    NoFoundComponent
+    NoFoundComponent,
+    TarjetaProductoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FontAwesomeModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

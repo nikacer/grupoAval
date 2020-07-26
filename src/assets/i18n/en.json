@@ -7,5 +7,18 @@
         "certificados": "certificates",
         "seguridad": "security",
         "pagos": "Payments"
+    },
+    "header": {
+        "perfil": "Profile",
+        "alertas": "alerts",
+        "idiomas": "Languages",
+        "salidaSegura": "logout"
+    },
+    "lenguaje": {
+        "es": "Spanish",
+        "en": "English"
+    },
+    "general": {
+        "buenosDias": "Good Morning"
     }
 }

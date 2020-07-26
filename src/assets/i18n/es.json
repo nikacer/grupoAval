@@ -7,5 +7,18 @@
         "certificados": "certificados",
         "seguridad": "seguridad",
         "pagos": "pagos"
+    },
+    "header": {
+        "perfil": "Perfil",
+        "alertas": "Alertas",
+        "idiomas": "Idiomas",
+        "salidaSegura": "Salida Segura"
+    },
+    "idiomas": {
+        "es": "Español",
+        "en": "Inglés"
+    },
+    "general": {
+        "buenosDias": "Buenos días"
     }
 }
