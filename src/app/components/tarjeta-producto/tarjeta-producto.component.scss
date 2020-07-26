@@ -1,0 +1,17 @@
+.card {
+    width: 23vw !important;
+    margin: 1vh 1vw;
+}
+
+@media only screen and (max-width: 768px) { 
+    .card{
+        width: 48vw !important;
+    }
+ }
+
+
+ @media only screen and (max-width: 400px) { 
+    .card{
+        width: 98vw !important;
+    }
+ }
