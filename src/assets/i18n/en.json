@@ -6,7 +6,15 @@
         "transferencias": "transfers",
         "certificados": "certificates",
         "seguridad": "security",
-        "pagos": "Payments"
+        "pagos": "Payments",
+        "tipoProducto": "product type",
+        "tipo": {
+            "CERTIFIED_DEPOSIT_TERM": "CERTIFIED DEPOSIT TERM",
+            "CREDIT_CARD": "CREDIT CARD",
+            "DEPOSIT_ACCOUNT": "DEPOSIT ACCOUNT",
+            "CURRENT_ACCOUNT": "CURRENT ACCOUNT",
+            "CREDIT": "Credit"
+        }
     },
     "header": {
         "perfil": "Profile",

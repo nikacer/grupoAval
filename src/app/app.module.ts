@@ -24,7 +24,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { NoFoundComponent } from './pages/no-found/no-found.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { TarjetaProductoComponent } from './components/tarjeta-producto/tarjeta-producto.component';
+import { TarjetaProductoComponent } from './components/tarjeta-producto/tipo-uno/tarjeta-producto-uno.component';
+import { TipoDosComponent } from './components/tarjeta-producto/tipo-dos/tarjeta-producto-dos.component';
+import { OcultarNumeroProductoPipe } from './pipes/ocultar-numero-producto.pipe';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { TarjetaProductoComponent } from './components/tarjeta-producto/tarjeta-
     FooterComponent,
     ProductosComponent,
     NoFoundComponent,
-    TarjetaProductoComponent
+    TarjetaProductoComponent,
+    TipoDosComponent,
+    OcultarNumeroProductoPipe
   ],
   imports: [
     BrowserModule,

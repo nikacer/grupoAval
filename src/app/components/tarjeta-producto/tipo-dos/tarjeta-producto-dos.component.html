@@ -1,0 +1,22 @@
+<div class="card" *ngIf="visible">
+    <div class="card-body">
+        <div class="cardHeader">
+            <img src="http://lorempixel.com/400/200">
+            <a href="#">Mas Detalles</a>
+        </div>
+        <div class="cardBody">
+            <h1>{{ "productos.tipoProducto" | translate}}</h1>
+            <span>{{ "productos.tipo." + producto.accountInformation.productType | translate}}</span>
+            <p>
+                Saldo Disponible
+                <span>15000000</span>
+            </p>
+        </div>
+        <div class="cardFooter">
+
+        </div>
+        <div class="cardButtons">
+
+        </div>
+    </div>
+</div>

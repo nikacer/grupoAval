@@ -1,0 +1,57 @@
+.producto {
+    position: relative;
+    .titulo{
+        height: 30px;
+        margin-left: 0.5vw;
+        padding: 5px 0px;
+        text-transform: uppercase;
+    }
+    .card {
+    width: 15vw ;
+    margin: 1vh 1vw;
+
+    .cardHeader{
+        height: 40px;
+        img{
+            width: 30px;
+            float: left;
+        }
+
+        a{
+            float: right;
+        }
+    }
+
+    .cardBody{
+        h1{
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        p{
+            span{
+                display: block;
+                font-weight: bold;
+                font-size: 20px;
+                &::before{
+                    content: '$';
+                }
+            }
+        }
+    }
+}
+
+}
+
+
+@media only screen and (max-width: 768px) { 
+    .card{
+        width: 48vw !important;
+    }
+ }
+
+
+ @media only screen and (max-width: 400px) { 
+    .card{
+        width: 98vw !important;
+    }
+ }
