@@ -4,6 +4,7 @@ import { idiomasDisponibles } from '../../models/translate.model';
 import { ReducerActionsTranslate } from '../../redux/actions/translate.actions';
 import { ReducerInterface } from '../../app.reducers';
 import { Store } from '@ngrx/store';
+import { ReducerActionBancos } from 'src/app/redux/actions/bancos.action';
 
 @Component({
   selector: 'app-header',
@@ -55,6 +56,10 @@ export class HeaderComponent implements OnInit {
 
   cambiarIdioma(idioma: idiomasDisponibles) {
     this.store.dispatch(ReducerActionsTranslate.CambiarIdioma({ lg: idioma }));
+  }
+
+  cambioOtrosBancos() {
+    this.store.dispatch(ReducerActionBancos.cambioEstadoBancos());
   }
 
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Productos } from '../../../assets/json/data.js';
 import { ProductInterface } from 'src/app/models/product.model.js';
+import { Store } from '@ngrx/store';
+import { ReducerInterface } from 'src/app/app.reducers.js';
 
 @Component({
   selector: 'app-productos',
@@ -12,7 +14,14 @@ export class ProductosComponent implements OnInit {
   public data: Array<ProductInterface> = Productos;
   tiposProductos = {};
   productoActual = '';
-  constructor() {
+  otrosBancos = false;
+
+  constructor(store: Store<ReducerInterface>) {
+    store.select('bancos').subscribe((resp: boolean) => {
+      this.otrosBancos = resp;
+      this.tiposProductos = [];
+      this.construirDatos();
+    });
     this.construirDatos();
   }
 
@@ -23,10 +32,15 @@ export class ProductosComponent implements OnInit {
 
   construirDatos() {
     this.data.forEach((producto: ProductInterface) => {
+
       if (typeof this.tiposProductos[producto.accountInformation.productType] === 'undefined') {
         this.tiposProductos[producto.accountInformation.productType] = [];
       }
-      this.tiposProductos[producto.accountInformation.productType].push(producto);
+      if (!this.otrosBancos) {
+        this.tiposProductos[producto.accountInformation.productType].push(producto);
+      } else if (producto.accountInformation.bank === 'BANCO_1') {
+        this.tiposProductos[producto.accountInformation.productType].push(producto);
+      }
     });
   }
 

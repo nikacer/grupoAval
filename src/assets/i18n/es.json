@@ -8,8 +8,13 @@
         "seguridad": "seguridad",
         "pagos": "pagos",
         "tipoProducto": "tipo de producto",
+        "valorInvertido": "Valor Invertido",
+        "plazo": "Plazo",
+        "fechaVencimiento": "Fecha de Vencimiento",
+        "cupoDisponible": "Cupo Disponible",
+        "proximoPagoMinimo": "Póximo pago minimo",
         "tipo": {
-            "CERTIFIED_DEPOSIT_TERM": "Plazo de depósito certificado",
+            "CERTIFIED_DEPOSIT_TERM": "CDT",
             "CREDIT_CARD": "Tarjeta de credito",
             "DEPOSIT_ACCOUNT": "Cuenta de ahorros",
             "CURRENT_ACCOUNT": "Cuenta corriente",
@@ -27,6 +32,13 @@
         "en": "Inglés"
     },
     "general": {
-        "buenosDias": "Buenos días"
+        "buenosDias": "Buenos días",
+        "Days": "Días",
+        "moreDetail": "Más detalles"
+    },
+    "footer": {
+        "titulo": "¿No encuentras lo que estás buscando ?",
+        "descripcion": "Seguimos para tener todo lo que necesitas en esta nueva experiancia. Mientras tanto, puedes buscar lo que no encuentres en la version anterios",
+        "versionAnterior": "ir a la versión anterior"
     }
 }

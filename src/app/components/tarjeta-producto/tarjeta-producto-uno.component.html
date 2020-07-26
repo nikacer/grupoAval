@@ -1,0 +1,65 @@
+<div class="producto">
+    <div class="titulo">
+        <label *ngIf="titulo" class="titulo">{{ "productos.tipo." +titulo.tipo | translate}}
+            <b>({{ titulo.length}})</b></label>
+    </div>
+
+    <div class="card" *ngIf="estructura">
+        <div class="card-body">
+            <div class="cardHeader">
+                <img [src]="estructura.logo">
+                <a (click)="estructura.mostrarDetalles.accion()"
+                    *ngIf="estructura.mostrarDetalles">{{ estructura.mostrarDetalles.text | translate}}</a>
+            </div>
+            <div class="cardBody">
+                <h1>{{ "productos.tipo." + producto.accountInformation.productType | translate}}</h1>
+                <span>No. {{ producto.accountInformation.accountIdentifier | ocultarNumeroProducto }}</span>
+                <p class="seccionUno" *ngIf="estructura.seccionUno">
+                    {{ estructura.seccionUno.titulo | translate}}
+                    <span>{{ estructura.seccionUno.valor }}</span>
+                </p>
+                <p class="seccionDos" *ngIf="estructura.seccionDos">
+                    <span>
+                        {{ estructura.seccionDos.textUno.titulo | translate}}
+                        {{estructura.seccionDos.textUno.valor}}
+                    </span>
+                    <span *ngIf="estructura.seccionDos.textoDos"></span>
+                </p>
+
+                <p class="seccionTres" *ngIf="estructura.seccionTres">
+                    <b>{{ estructura.seccionTres.titulo | translate }}</b>
+                    {{estructura.seccionTres.valor}}
+                </p>
+
+                <div class="slide" *ngIf="estructura.slide">
+
+                    <span>{{ estructura.slide.titulo}} {{ estructura.slide.valor}}</span>
+
+
+                    <div class="progress">
+                        <div class="progress-bar" [ngStyle]="{'width': estructura.slide.avance + '%'} "
+                            role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+                <div class="seccionDuo" *ngIf="estructura.seccionDuo">
+                    <div>
+                        {{ estructura.seccionDuo.seccionUno.texto}}
+                        <span> {{ estructura.seccionDuo.seccionUno.valor}}</span>
+                    </div>
+                    <div *ngIf="estructura.seccionDuo.seccionDos">
+                        {{ estructura.seccionDuo.seccionDos.texto}}
+                        <span> {{ estructura.seccionDuo.seccionDos.valor}}</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cardFooter">
+
+            </div>
+            <div class="cardButtons">
+
+            </div>
+        </div>
+    </div>
+</div>

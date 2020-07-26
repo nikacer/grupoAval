@@ -24,9 +24,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { NoFoundComponent } from './pages/no-found/no-found.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { TarjetaProductoComponent } from './components/tarjeta-producto/tipo-uno/tarjeta-producto-uno.component';
-import { TipoDosComponent } from './components/tarjeta-producto/tipo-dos/tarjeta-producto-dos.component';
+import { TarjetaProductoComponent } from './components/tarjeta-producto/tarjeta-producto-uno.component';
 import { OcultarNumeroProductoPipe } from './pipes/ocultar-numero-producto.pipe';
+
+import { DatePipe, CurrencyPipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -37,8 +38,7 @@ import { OcultarNumeroProductoPipe } from './pipes/ocultar-numero-producto.pipe'
     ProductosComponent,
     NoFoundComponent,
     TarjetaProductoComponent,
-    TipoDosComponent,
-    OcultarNumeroProductoPipe
+    OcultarNumeroProductoPipe,
   ],
   imports: [
     BrowserModule,
@@ -61,7 +61,7 @@ import { OcultarNumeroProductoPipe } from './pipes/ocultar-numero-producto.pipe'
     }),
     NgbModule
   ],
-  providers: [],
+  providers: [DatePipe, CurrencyPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -178,6 +178,20 @@ export const Productos = [
       "productType": "CREDIT",
       "bank": "BANCO_2"
     },
+    "productAccountBalances": {
+      "saldo_mora_pesos": {
+        "amount": 500000,
+        "currencyCode": "COP"
+      },
+      "saldo_actual": {
+        "amount": 10126012.54,
+        "currencyCode": "COP"
+      },
+      "cuotas": {
+        "total": 24,
+        "actual": 10
+      }
+    },
     "locked": true,
     "id": "1315000180",
     "typeAccount": "CREDIT"
@@ -222,7 +236,7 @@ export const Productos = [
         "currencyCode": "COP"
       }
     },
-    "capacity": 100
+    "capacity": 30
   },
   {
     "accountInformation": {
@@ -264,7 +278,7 @@ export const Productos = [
         "currencyCode": "COP"
       }
     },
-    "capacity": 99.576128
+    "capacity": 70.8
   },
   {
     "accountInformation": {

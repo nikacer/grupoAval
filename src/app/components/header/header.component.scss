@@ -6,6 +6,15 @@
     .user {
         margin-bottom: 10px;
     }
+
+    .otrosBancos{
+        display: inline-flexbox;
+        .custom-range{
+            width: 50px;
+            padding-left: 15px;
+            padding-top: 10px;
+        }
+    }
     ul {
         list-style: none;
         padding: 0px;
